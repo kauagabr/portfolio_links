@@ -43,6 +43,15 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .card:hover {
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 20px rgba(88, 166, 255, 0.3);
+        }
+        .card-habilidade {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card-habilidade:hover {
             transform: translateY(-10px);
             transition: transform 0.3s ease;
             box-shadow: 0 4px 20px rgba(88, 166, 255, 0.3);
@@ -70,6 +79,13 @@
         }
         footer a:hover {
             color: #1f6feb;
+        }
+        .dropdown {
+            position: relative; 
+        }
+        .dropdown-menu {
+            position: absolute;
+            z-index: 1100;
         }
         .dropdown:hover .dropdown-menu {
             display: block;
@@ -118,7 +134,7 @@
                         
                         <!-- Botão com submenu -->
                         <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"  aria-expanded="false" data-bs-display="static">
                                 Ver no Trabalho
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -172,7 +188,7 @@
             <h2 class="text-center mb-4" style="color: #c9d1d9;">Habilidades Técnicas</h2>
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <div class="card bg-dark text-light">
+                    <div class="card-habilidade card bg-dark text-light">
                         <div class="card-body">
                             <h5 class="card-title text-center">Linguagens de Programação</h5>
                             <ul class="list-unstyled mb-0">
@@ -184,7 +200,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="card bg-dark text-light">
+                    <div class="card-habilidade card bg-dark text-light">
                         <div class="card-body">
                             <h5 class="card-title text-center">Desenvolvimento Web</h5>
                             <ul class="list-unstyled mb-0">
@@ -196,7 +212,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="card bg-dark text-light">
+                    <div class="card-habilidade card bg-dark text-light">
                         <div class="card-body">
                             <h5 class="card-title text-center">Machine Learning & Deep Learning</h5>
                             <ul class="list-unstyled mb-0">
@@ -207,7 +223,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="card bg-dark text-light">
+                    <div class="card-habilidade card bg-dark text-light">
                         <div class="card-body">
                             <h5 class="card-title text-center">Ferramentas e Bibliotecas</h5>
                             <ul class="list-unstyled mb-0">
@@ -221,7 +237,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="card bg-dark text-light">
+                    <div class="card-habilidade card bg-dark text-light">
                         <div class="card-body">
                             <h5 class="card-title text-center">APIs e Frameworks</h5>
                             <ul class="list-unstyled mb-0">
@@ -234,7 +250,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="card bg-dark text-light">
+                    <div class="card-habilidade card bg-dark text-light">
                         <div class="card-body">
                             <h5 class="card-title text-center">Versionamento de Código</h5>
                             <ul class="list-unstyled mb-0">
