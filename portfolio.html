@@ -15,6 +15,7 @@
         }
         .card-text {
             color: #c9d1d9;
+            text-align: justify
         }
         .card-body i {
             color: #c9d1d9;
@@ -61,11 +62,11 @@
             transition: color 0.3s ease;
         }
         .btn-primary {
-            background-color: #238636;
             border: none;
         }
-        .btn-primary:hover {
-            background-color: #2ea043;
+        .btn-success {
+            background-color: #238636;
+            border: none;
         }
         footer {
             background-color: #161b22;
@@ -91,13 +92,32 @@
             display: block;
         }
         @media (min-width: 1200px) {
-            .card-body {
+            .container {
+                width: 1100px; 
+            }
+        }
+        @media (min-width: 1200px) {
+            .card-body-2 {
                 height: 180px;
             }
         }
         @media (min-width: 768px) and (max-width: 991px) {
-            .card-body {
+            .card-body-2 {
                 height: 212px;
+            }
+        }
+        @media (max-width: 991px) {
+            .ajuste {
+                width: 60%;
+                margin: 0 auto; 
+                display: block;
+            }
+        }
+        @media (min-width: 1200px) {
+            .ajuste {
+                width: 80%;
+                margin: 0 auto; 
+                display: block;
             }
         }
     </style>
@@ -116,26 +136,26 @@
     </header>
 
     <main class="container mt-5">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="row row-cols-1 row-cols-md-1 g-4">
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-water"></i> Sistema de Previsão da Cota do Rio Una</h5>
-                        <p class="card-text">Criação de sistema preditivo utilizando dados hidrometeorológicos e machine learning.</p>
-                        <a href="https://drive.google.com/file/d/1iZqAjoCakapFhBkC-ZmMvFjDLO-bpfth/view?usp=sharing" class="btn btn-primary">Ver Trabalho</a>
+                        <h5 class="card-title"><i class="fas fa-water"></i> Sistema Preditivo com Dados Hidrometeorológicos e Machine Learning</h5>
+                        <p class="card-text">Desenvolvimento de um sistema avançado que utiliza dados hidrometeorológicos e algoritmos de machine learning para prever níveis de cota de rios. A solução fornece análises precisas e predições confiáveis, auxiliando na gestão de recursos hídricos e na mitigação de riscos de enchentes.</p>
+                        <a href="https://drive.google.com/file/d/1iZqAjoCakapFhBkC-ZmMvFjDLO-bpfth/view?usp=sharing" class="btn btn-primary">Ver Artigo</a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-search"></i> Sistemas de Detecção</h5>
-                        <p class="card-text">Detecção de bovinos, equipamento de proteção individual e rachaduras utilizando redes neurais convolucionais.</p>
+                        <h5 class="card-title"><i class="fas fa-search"></i> Sistema de Detecção Inteligente com Redes Neurais Convolucionais</h5>
+                        <p class="card-text">Desenvolvimento de soluções para detecção eficiente de bovinos, equipamentos de proteção individual (EPIs) e rachaduras em superfícies. Utilizando redes neurais convolucionais, o sistema garante alta precisão na identificação e monitoramento desses elementos, contribuindo para maior segurança e controle em diversas aplicações.</p>
                         
                         <!-- Botão com submenu -->
                         <div class="dropdown">
                             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"  aria-expanded="false" data-bs-display="static">
-                                Ver Trabalhos
+                                Ver Artigos
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <li><a class="dropdown-item" href="https://www.even3.com.br/anais/connepi-belem-2024/840189-utilizando-redes-neurais-convolucionais-para-deteccao-de-bovinos-em-tempo-real/">Detecção de Bovinos</a></li>
@@ -150,27 +170,31 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-lungs"></i> Classificação de Doenças Pulmonares</h5>
-                        <p class="card-text">Projeto de classificação de pneumonia em raio-X utilizando redes neurais convolucionais.</p>
-                        <a href="https://docs.google.com/document/d/18WIP_Oflfq4va5QmLsjhrdmPK1iXaTYxwjjO-VnMck4/edit?usp=sharing" class="btn btn-primary">Ver Trabalho</a>
+                        <h5 class="card-title"><i class="fas fa-lungs"></i> Sistema de Classificação de Pneumonia em Raios-X com Redes Neurais Convolucionais</h5>
+                        <p class="card-text">Desenvolvimento de um sistema inteligente que utiliza redes neurais convolucionais (CNNs) para analisar exames de raio-X e classificar pneumonia. A solução combina aprendizado profundo e processamento de imagens para auxiliar no diagnóstico precoce e otimizar decisões clínicas.</p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-brain"></i> Detecção e Segmentação de Tumores Cerebrais</h5>
-                        <p class="card-text">Sistema de segmentação de imagens médicas utilizando redes neurais convolucionais.</p>
-                        <a href="https://drive.google.com/drive/folders/1KlgHD8Ej1qObxw47uv_Sd4lim28U4dGw?usp=drive_link" class="btn btn-primary">Ver Trabalho</a>
+                        <h5 class="card-title"><i class="fas fa-brain"></i> Sistema de Detecção e Segmentação de Tumores Cerebrais com Redes Neurais Convolucionais</h5>
+                        <p class="card-text">Este sistema utiliza redes neurais convolucionais (CNNs) para a detecção e segmentação precisa de tumores cerebrais em imagens de ressonância magnética. Com a implementação do algoritmo YOLOv11, o modelo realiza a análise em tempo real, identificando áreas tumorais com alta precisão. </p>
+                        <a href="https://drive.google.com/drive/folders/1KlgHD8Ej1qObxw47uv_Sd4lim28U4dGw?usp=drive_link" class="btn btn-primary">Ver Artigo</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card d-flex flex-column flex-lg-row">
+                    <!-- Parte do texto e botão -->
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title"><i class="fas fa-chalkboard-teacher"></i> Sistema de Gerenciamento de Aulas</h5>
-                        <p class="card-text">Desenvolvimento de interfaces e lógica de negócio para gestão de aulas.</p>
-                        <a href="https://github.com/kauagabr/Class-Management" class="btn btn-primary">Ver Trabalho</a>
+                        <p class="card-text">Desenvolvimento de um sistema completo para gestão de aulas, com foco na criação de interfaces intuitivas e implementação da lógica de negócios para administração eficiente de turmas, horários e conteúdos. A solução proporciona uma experiência fluida tanto para os instrutores quanto para os alunos, permitindo o acompanhamento em tempo real das atividades, matrículas e avaliações, além de integrar funcionalidades que garantem a organização e otimização dos processos acadêmicos.</p>
+                        <a href="https://github.com/kauagabr/Class-Management" class="btn btn-success" style="width: 120px;">Ver Trabalho</a>
+                    </div>
+                    <!-- Parte da imagem -->
+                    <div class="card-img-right">
+                        <img src="img/img_home.png" class="card-img-top img-fluid ajuste" alt="Imagem do Sistema">
                     </div>
                 </div>
             </div>
@@ -178,7 +202,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"><i class="fas fa-book"></i> Monitoria Acadêmica</h5>
-                        <p class="card-text">Monitor de Lógica de Programação e Estatística, auxiliando alunos em exercícios e conceitos.</p>
+                        <p class="card-text">Atuação como monitor nas disciplinas de Lógica de Programação e Estatística, oferecendo suporte a alunos em exercícios práticos e na compreensão de conceitos fundamentais. Ajudando na resolução de dúvidas, esclarecimento de teorias e aplicação de métodos, promovendo um ambiente de aprendizado dinâmico e eficiente.</p>
                     </div>
                 </div>
             </div>
@@ -189,7 +213,7 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <div class="card-habilidade card bg-dark text-light">
-                        <div class="card-body">
+                        <div class="card-body card-body-2">
                             <h5 class="card-title text-center">Linguagens de Programação</h5>
                             <ul class="list-unstyled mb-0">
                                 <li><i class="fab fa-python"></i> Python</li>
@@ -201,7 +225,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card-habilidade card bg-dark text-light">
-                        <div class="card-body">
+                        <div class="card-body card-body-2">
                             <h5 class="card-title text-center">Desenvolvimento Web</h5>
                             <ul class="list-unstyled mb-0">
                                 <li><i class="fab fa-html5"></i> HTML</li>
@@ -213,7 +237,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card-habilidade card bg-dark text-light">
-                        <div class="card-body">
+                        <div class="card-body card-body-2">
                             <h5 class="card-title text-center">Machine Learning & Deep Learning</h5>
                             <ul class="list-unstyled mb-0">
                                 <li><i class="fas fa-brain"></i> Ultralytics</li>
@@ -224,7 +248,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card-habilidade card bg-dark text-light">
-                        <div class="card-body">
+                        <div class="card-body card-body-2">
                             <h5 class="card-title text-center">Ferramentas e Bibliotecas</h5>
                             <ul class="list-unstyled mb-0">
                                 <li><i class="fa-solid fa-database"></i> Pandas</li>
@@ -238,7 +262,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card-habilidade card bg-dark text-light">
-                        <div class="card-body">
+                        <div class="card-body card-body-2">
                             <h5 class="card-title text-center">APIs e Frameworks</h5>
                             <ul class="list-unstyled mb-0">
                                 <li><i class="fa-solid fa-gear"></i> <i class="fab fa-python"></i> Django</li>
@@ -251,7 +275,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card-habilidade card bg-dark text-light">
-                        <div class="card-body">
+                        <div class="card-body card-body-2">
                             <h5 class="card-title text-center">Versionamento de Código</h5>
                             <ul class="list-unstyled mb-0">
                                 <li><i class="fab fa-git"></i> Git</li>
