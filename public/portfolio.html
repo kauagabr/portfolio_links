@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Kauã Gabriel</title>
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Typed.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Arial', sans-serif;
+        }
+        .card-text {
+            color: #c9d1d9;
+            text-align: justify;
+        }
+        .texto-justificado {
+            text-align: justify;
+        }
+        .card-body i {
+            color: #c9d1d9;
+        }
+        .navbar {
+            background-color: #161b22;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #58a6ff;
+        }
+        .navbar-brand:hover {
+            color: #1f6feb;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #58a6ff;
+            box-shadow: 0 0 10px rgba(88, 166, 255, 0.6);
+        }
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 20px rgba(88, 166, 255, 0.3);
+        }
+        .card-title {
+            color: #58a6ff;
+            transition: color 0.3s ease;
+        }
+        .btn-primary {
+            border: none;
+        }
+        .btn-success {
+            background-color: #238636;
+            border: none;
+        }
+        footer {
+            background-color: #161b22;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #58a6ff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            color: #1f6feb;
+        }
+        .dropdown {
+            position: relative; 
+        }
+        .dropdown-menu {
+            position: absolute;
+            z-index: 1100;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        @media (min-width: 1200px) {
+            .container {
+                width: 1100px; 
+            }
+        }
+        @media (min-width: 1200px) {
+            .card-body-2 {
+                height: 180px;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            .card-body-2 {
+                height: 212px;
+            }
+        }
+        @media (max-width: 991px) {
+            .ajuste {
+                width: 60%;
+                margin: 0 auto; 
+                display: block;
+            }
+        }
+        @media (min-width: 1200px) {
+            .ajuste {
+                width: 80%;
+                margin: 0 auto; 
+                display: block;
+            }
+        }
+        .skill-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            background-color: rgba(45, 55, 72, 0.2);
+        }
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background-color: rgba(45, 55, 72, 0.8);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        .skill-card p {
+            transition: color 0.3s ease;
+        }
+        .skill-card:hover p {
+            color: #ffffff;
+        }
+        .skill-icon {
+            width: 48px;
+            height: 48px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .skill-card:hover .skill-icon {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm" style="border-bottom: 0.5px solid #c9d1d963;">
+        <div class="container-fluid">
+            <!-- Botão de toggle para mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Lista de itens centralizada -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#sobre">Sobre Mim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#projetos">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-book" href="#habilidades">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center" style="margin-top: 5rem;">
+        <h1 class="mt-3 fw-bold">Bem-vindo ao meu Portfólio</h1>
+        <p id="typed-text" class="fs-4"></p>
+    </header>
+
+    <hr id="sobre">
+
+    <main class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+                <img src="img/foto.png" alt="Foto de Kauã Gabriel" style="width: 300px; " class="profile-img img-fluid rounded-circle shadow-md">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-4">Sobre Mim</h2>
+                <p class="texto-justificado">
+                    Sou Kauã Gabriel, Engenheiro de Software e Cientista de Dados, com uma sólida formação técnica em manutenção e suporte de informática. Atualmente, estou em processo de conclusão da graduação em Análise e Desenvolvimento de Sistemas, o que complementa minha base de conhecimento para o desenvolvimento de soluções inovadoras e eficientes.
+                </p>
+                <p class="texto-justificado">
+                    Minha experiência abrange áreas como sistemas embarcados, segmentação de imagens médicas e outras soluções tecnológicas avançadas. Sempre busco aplicar meus conhecimentos para transformar dados em soluções práticas e de valor agregado, além de estar constantemente em busca de novos aprendizados.
+                </p>
+                <p class="texto-justificado">
+                    Estou aberto a colaborar em projetos que promovam inovações tecnológicas com impacto positivo para a sociedade.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <hr id="projetos">
+
+    <div class="header text-center py-5">
+        <h3 class="fw-bold">Projetos Desenvolvidos</h3>
+        <p>Explore os sistemas e soluções criados para diferentes áreas de aplicação.</p>
+    </div>
+
+    <main class="container">
+        <div class="row row-cols-1 row-cols-md-1 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-water"></i> Sistema Preditivo com Dados Hidrometeorológicos e Machine Learning</h5>
+                        <p class="card-text">Desenvolvimento de um sistema avançado que utiliza dados hidrometeorológicos e algoritmos de machine learning para prever níveis de cota de rios. A solução fornece análises precisas e predições confiáveis, auxiliando na gestão de recursos hídricos e na mitigação de riscos de enchentes.</p>
+                        <a href="https://www.even3.com.br/anais/connepi-belem-2024/840174-construcao-de-um-dataset--para-auxiliar-a-previsao--de-niveis-de-rios-utilizando-tecnicas-de-aprendizado-de-maqui/" class="btn btn-primary">Ver Artigo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-search"></i> Sistemas de Detecção Inteligente Utilizando Redes Neurais Convolucionais</h5>
+                        <p class="card-text">Desenvolvimento de soluções para detecção eficiente de bovinos, equipamentos de proteção individual (EPIs) e rachaduras em superfícies. Utilizando redes neurais convolucionais, o sistema garante alta precisão na identificação e monitoramento desses elementos, contribuindo para maior segurança e controle em diversas aplicações.</p>
+                        
+                        <!-- Botão com submenu -->
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"  aria-expanded="false" data-bs-display="static">
+                                Ver Artigos
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="https://www.even3.com.br/anais/connepi-belem-2024/840189-utilizando-redes-neurais-convolucionais-para-deteccao-de-bovinos-em-tempo-real/">Detecção de Bovinos</a></li>
+                                <li><a class="dropdown-item" href="https://www.even3.com.br/anais/connepi-belem-2024/840178-utilizando-redes-neurais-convolucionais-para-deteccao-de-equipamento-de-protecao-individual-em-tempo-real/">Detecção de EPI</a></li>
+                                <li><a class="dropdown-item" href="https://www.even3.com.br/anais/connepi-belem-2024/840198-utilizando-redes-neurais-convolucionais-para-deteccao-de-rachaduras-em-obras-de-construcao-civil-em-tempo-real/">Detecção de Rachaduras</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-lungs"></i> Sistema de Classificação de Pneumonia em Raios-X com Redes Neurais Convolucionais</h5>
+                        <p class="card-text">Desenvolvimento de um sistema inteligente que utiliza redes neurais convolucionais (CNNs) para analisar exames de raio-X e classificar pneumonia. A solução combina aprendizado profundo e processamento de imagens para auxiliar no diagnóstico precoce e otimizar decisões clínicas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-brain"></i> Sistema de Detecção e Segmentação de Tumores Cerebrais com Redes Neurais Convolucionais</h5>
+                        <p class="card-text">Este sistema utiliza redes neurais convolucionais (CNNs) para a detecção e segmentação precisa de tumores cerebrais em imagens de ressonância magnética. Com a implementação do algoritmo YOLOv11, o modelo realiza a análise em tempo real, identificando áreas tumorais com alta precisão. </p>
+                        <a href="https://doi.org/10.51359/2965-4661.2024.265072" class="btn btn-success">Ver Trabalho</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-eye"></i> Sistema de Detecção e Anonimização de Faces com Desfoque Automático</h5>
+                        <p class="card-text">Desenvolvimento de um sistema para detecção de faces em imagens, utilizando APIs avançadas de machine learning e OpenCV. O sistema realiza a identificação de faces e aplica desfoque nas áreas detectadas, preservando a privacidade de forma eficiente e automatizada.</p>
+                        <a href="https://colab.research.google.com/drive/1iWkLOajthIGw-8Xk0EbuDlamxE0DErL3?usp=sharing" class="btn btn-success">Ver Trabalho</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-stethoscope"></i> Sistema de Classificadores para Detecção de Estágio de Cirrose Hepática</h5>
+                        <p class="card-text">Desenvolvimento de um sistema preditivo baseado em machine learning para a classificação de estágios de cirrose hepática. O modelo utiliza variáveis clínicas e laboratoriais para auxiliar na identificação precisa dos diferentes estágios da doença, apoiando profissionais da saúde no diagnóstico e no acompanhamento dos pacientes.</p>
+                        <a href="https://colab.research.google.com/drive/1CtTEsQ-IC__7Ho5YMzMmR9dil9aMFfPY?usp=sharing" class="btn btn-success">Ver Trabalho</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card d-flex flex-column flex-lg-row">
+                    <!-- Parte do texto e botão -->
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title"><i class="fas fa-chalkboard-teacher"></i> Sistema de Gerenciamento de Aulas</h5>
+                        <p class="card-text">Desenvolvimento de um sistema completo para gestão de aulas, com foco na criação de interfaces intuitivas e implementação da lógica de negócios para administração eficiente de turmas, horários e conteúdos. A solução proporciona uma experiência fluida tanto para os instrutores quanto para os alunos, permitindo o acompanhamento em tempo real das atividades, matrículas e avaliações, além de integrar funcionalidades que garantem a organização e otimização dos processos acadêmicos.</p>
+                        <a href="https://github.com/kauagabr/Class-Management" class="btn btn-success mt-auto" style="width: 115px;">Ver Trabalho</a>
+                    </div>
+                    <!-- Parte da imagem -->
+                    <div class="card-img-right">
+                        <img src="img/img_home.png" class="card-img-top img-fluid ajuste" alt="Imagem do Sistema">
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-book"></i> Monitoria Acadêmica</h5>
+                        <p class="card-text">Atuação como monitor nas disciplinas de Lógica de Programação e Estatística, oferecendo suporte a alunos em exercícios práticos e na compreensão de conceitos fundamentais. Ajudando na resolução de dúvidas, esclarecimento de teorias e aplicação de métodos, promovendo um ambiente de aprendizado dinâmico e eficiente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main> 
+
+    
+
+    <hr id="habilidades">
+
+    <main class="container py-2">
+        <section id="skills" class="container mt-5">
+            <h2 class="text-center mb-4 fw-bold" style="color: #c9d1d9;">Habilidades Técnicas</h2>
+            <div class="row justify-content-center">
+                <!-- Python -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/python.png" alt="PYTHON" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">Python</p>
+                    </div>
+                </div>
+                
+                <!-- Java -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/java.png" alt="Java" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">Java</p>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/js.png" alt="JavaScript" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">JavaScript</p>
+                    </div>
+                </div>
+
+                <!-- HTML -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/html.png" alt="HTML" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">HTML</p>
+                    </div>
+                </div>
+        
+                <!-- CSS -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/css-3.png" alt="css" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">CSS</p>
+                    </div>
+                </div>
+        
+                <!-- Bootstrap -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/bootstrap.png" alt="Bootstrap" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">Bootstrap</p>
+                    </div>
+                </div>
+        
+                <!-- Ultralytics -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/ultralytics.svg" alt="Ultralytics" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">Ultralytics</p>
+                    </div>
+                </div>
+
+                <!-- OpenCV -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/opencv.png" alt="OpenCV" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">OpenCV</p>
+                    </div>
+                </div>
+
+                <!-- Scikit-learn -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/Scikit_learn.png" alt="Scikit-learn" class="skill-icon mb-3" style="width: 65px;">
+                        <p class="text-slate-300 font-semibold mb-0">Scikit-learn</p>
+                    </div>
+                </div>
+        
+                <!-- Git -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/git.png" alt="Git" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">Git</p>
+                    </div>
+                </div>
+        
+                <!-- GitHub -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/github.png" alt="GitHub" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">GitHub</p>
+                    </div>
+                </div>
+
+                <!-- Django -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/django-icon.png" alt="Django" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">Django</p>
+                    </div>
+                </div>
+
+                <!-- Flask -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/flask-icon.png" alt="Flask" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">Flask</p>
+                    </div>
+                </div>
+
+                <!-- Spring Boot -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/spring-icon.png" alt="Spring Boot" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">Spring Boot</p>
+                    </div>
+                </div>
+                
+                <!-- FireBase -->
+                <div class="col-md-2 col-sm-4 col-6 mb-4 text-center">
+                    <div class="skill-card p-4 bg-slate-800 rounded-lg shadow-sm">
+                        <img src="img/firebase.png" alt="FireBase" class="skill-icon mb-3">
+                        <p class="text-slate-300 font-semibold mb-0">FireBase</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <hr id="contato" class="my-5">
+
+    <main class="container py-3">
+        <section>
+            <h2 class="text-center mb-2 fw-bold" style="color: #c9d1d9;">Vamos Conversar</h2>
+            <p class="text-center mb-3" style="color: #c9d1d9;">Fique à vontade para entrar em contato comigo através dos canais abaixo.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <div class="contact-item mb-3">
+                        <i class="bi bi-envelope-fill" style="font-size: 2.5rem; color: #c9d1d9;"></i>
+                        <p class="mt-2"><a href="mailto:kaua32475@gamil.com" style="font-size: 1.2rem; color: #c9d1d9;">kaua32475@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item mb-3">
+                        <i class="bi bi-linkedin" style="font-size: 2.5rem; color: #c9d1d9;"></i>
+                        <p class="mt-2"><a href="https://www.linkedin.com/in/kau%C3%A3gabrielsilva/" target="_blank" style="font-size: 1.2rem; color: #c9d1d9;">LinkedIn: @KauãGabriel</a></p>
+                    </div>
+                    <div class="contact-item mb-3">
+                        <i class="bi bi-github" style="font-size: 2.5rem; color: #c9d1d9;"></i>
+                        <p class="mt-2"><a href="https://github.com/kauagabr" target="_blank" style="font-size: 1.2rem; color: #c9d1d9;">GitHub: @kauagabr</a></p>
+                    </div>
+                    <div class="contact-item mb-3">
+                        <i class="bi bi-instagram" style="font-size: 2.5rem; color: #c9d1d9;"></i>
+                        <p class="mt-2"><a href="https://www.instagram.com/kaua7568?igsh=MXA5bGYzejYyajNxMg==" target="_blank" style="font-size: 1.2rem; color: #c9d1d9;">Instagram: @kauagabr</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+      
+    <footer>
+        <p>&copy; 2024 Kauã Gabriel | Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Configuração do Typed.js
+        document.addEventListener("DOMContentLoaded", function() {
+            const typed = new Typed('#typed-text', {
+                strings: [
+                    "Olá, meu nome é Kauã Gabriel",
+                    "Sou Cientista de Dados e Desenvolvedor Full-Stack",
+                    ":)"
+                ], 
+                typeSpeed: 50, // Velocidade da digitação (em milissegundos)
+                backSpeed: 60, // Velocidade para apagar (em milissegundos)
+                loop: true, // Repetir a animação infinitamente
+                showCursor: false, // Mostrar cursor piscando
+                shuffle: false // Não embaralhar as frases
+            });
+        });
+    </script>
+</body>
+</html>
